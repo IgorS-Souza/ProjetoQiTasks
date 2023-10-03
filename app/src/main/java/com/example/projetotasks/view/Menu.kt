@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.projetotasks.backgroundGradient
+import com.example.projetotasks.components.Boards
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -43,19 +44,16 @@ fun MenuMain(navController: NavController){
         Color(0xFFdd4c91),
         Color(0xFFe69871)
     )
-    Scaffold (
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Menu",
-                        fontSize = 18.sp,
-                        color = Color.Black
-                    )
-                }
-            )
-        }
+    Column (
     ){
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(60.dp)
+                .background(color=Color.White)
+        ){
+
+        }
         Column(modifier = Modifier
             .fillMaxSize()
             .background(
@@ -67,7 +65,7 @@ fun MenuMain(navController: NavController){
         ){
             Row(modifier = Modifier
                 .fillMaxWidth()
-                .height(125.dp)
+                .height(70.dp)
             ){
                 Box(modifier = Modifier
                     .fillMaxSize()
@@ -78,28 +76,7 @@ fun MenuMain(navController: NavController){
                         .fillMaxHeight()
                         .background(color = Color.Red)
                     ){
-                        Row (modifier = Modifier
-                            .fillMaxSize()
-                            .background(color = Color.Yellow)
-                        ){
-                            Button(
-                                onClick = { /*TODO*/ },
-                                modifier = Modifier
-                                    .height(100.dp)
-                                    .width(100.dp)
-                                    .align(alignment = Alignment.Bottom)
-
-                            ) {
-                                Text(text = "Board 1")
-                            }
-                        }
-                    }
-                    Column {
-                        Row {
-                            Button(onClick = { /*TODO*/ }) {
-                                Text(text = "Board 2")
-                            }
-                        }
+                        Boards()
                     }
                 }
             }
