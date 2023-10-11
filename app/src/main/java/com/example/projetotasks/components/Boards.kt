@@ -40,7 +40,6 @@ fun Boards(
     )
     Column(
         modifier = Modifier
-            .background(color = Color.Blue)
             .width(160.dp)
             .fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -61,7 +60,7 @@ fun Boards(
                 )
                 .padding(start = 10.dp)
                 .drawBehind {
-                    val strokeWidthPx = 2f
+                    val strokeWidthPx = 4f
                     val color = Color.White
                     val width = size.width
                     val height = size.height
@@ -69,7 +68,7 @@ fun Boards(
 
                     // Top line
                     drawLine(
-                        color = color,
+                        color = Color(0xFFdd4c91),
                         start = Offset(x = width, y = 0f),
                         end = Offset(x = cornerRadius, y = 0f),
                         strokeWidth = strokeWidthPx
@@ -85,21 +84,21 @@ fun Boards(
 
                     // Left line
                     drawLine(
-                        color = color,
+                        color = Color(0xFFe69871),
                         start = Offset(x = 0f, y = cornerRadius),
                         end = Offset(x = 0f, y = height - cornerRadius),
                         strokeWidth = strokeWidthPx
                     )
                     // Right line
-                    drawLine(
-                        color = Color.Yellow,
-                        start = Offset(x = width, y = 0f),
-                        end = Offset(x = width , y = height),
-                        strokeWidth = strokeWidthPx
-                    )
+                    //drawLine(
+                        //color = Color(0xFFe69871),
+                        //start = Offset(x = width, y = 0f),
+                        //end = Offset(x = width , y = height),
+                        //strokeWidth = strokeWidthPx
+                    //)
                     // Top left arc
                     drawArc(
-                        color = color,
+                        color = Color(0xFFdd4c91),
                         startAngle = 180f,
                         sweepAngle = 90f,
                         useCenter = false,
@@ -121,7 +120,7 @@ fun Boards(
 
                     // Bottom right arc
                     drawArc(
-                        color = color,
+                        color = Color(0xFFdd4c91),
                         startAngle = 0f,
                         sweepAngle = 90f,
                         useCenter = false,
@@ -134,7 +133,7 @@ fun Boards(
                     )
                     // Bottom right arc
                     drawArc(
-                        color = color,
+                        color = Color(0xFFdd4c91),
                         startAngle = 90f,
                         sweepAngle = 90f,
                         useCenter = false,

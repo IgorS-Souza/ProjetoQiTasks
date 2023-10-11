@@ -74,7 +74,6 @@ fun MenuMain(navController: NavController){
                     Column (modifier = Modifier
                         .width(200.dp)
                         .fillMaxHeight()
-                        .background(color = Color.Red)
                     ){
                         Boards()
                     }
